@@ -13,8 +13,8 @@
 	if(user.getRole()==2)
 	{
 %>
-		<tr><td height="30"><div align="center"><a href="#" target="mainFrame">班级事务发布</a></div></td></tr>
-		<tr><td height="30"><div align="center"><a href="#" target="mainFrame">班级事务维护</a></div></td></tr>
+		<tr><td height="30"><div align="center"><a href="SortList" target="mainFrame">班级事务发布</a></div></td></tr>
+		<tr><td height="30"><div align="center"><a href="AffairsMaintain" target="mainFrame">班级事务维护</a></div></td></tr>
 <%
 	}
 %>
