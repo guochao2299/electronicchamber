@@ -7,7 +7,7 @@ public class Affair
 	private int affairId;
 	private String title;
 	private String content;
-	private Date releaseTime;
+	private String releaseTime;
 	private int sortId;
 	
 	public int getAffairId()
@@ -34,11 +34,11 @@ public class Affair
 	{
 		this.content = content;
 	}
-	public Date getReleaseTime()
+	public String getReleaseTime()
 	{
 		return releaseTime;
 	}
-	public void setReleaseTime(Date releaseTime)
+	public void setReleaseTime(String releaseTime)
 	{
 		this.releaseTime = releaseTime;
 	}

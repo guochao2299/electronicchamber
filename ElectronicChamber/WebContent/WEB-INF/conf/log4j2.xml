@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout  pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <JDBC name="databaseAppender" tableName="userlog">    //提供的参考名，表名
+            <ConnectionFactory class="com.ec.bean.ConnectionFactory" method="getConnection" />    //java类，和得到一个数据库连接的方法
+            <!--<Column name="ID" pattern=""/>-->  
+           <Column name="createDate" pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}" />
+           <Column name="level" pattern="%level" />
+            <Column name="category" pattern="%C" />     //数据库字段名，属性名，pattern 要显示的格式
+            <Column name="fileName" pattern="%F" />  
+            <Column name="MESSAGE"  pattern="%m" />  
+            <Column name="line" pattern="%L" />  
+            <Column name="allCategory" pattern="%l" />  
+        </JDBC>  
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="databaseAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>

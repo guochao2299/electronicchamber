@@ -6,9 +6,18 @@ public class Comment
 {
 	private int commentId;
 	private String content;
-	private Date releaseTime;
-	private int sortId;
+	private String releaseTime;
+	private int affairId;
+	private String userAccount;
 	
+	public String getUserAccount()
+	{
+		return userAccount;
+	}
+	public void setUserAccount(String userAccount)
+	{
+		this.userAccount = userAccount;
+	}
 	public int getCommentId()
 	{
 		return commentId;
@@ -25,20 +34,20 @@ public class Comment
 	{
 		this.content = content;
 	}
-	public Date getReleaseTime()
+	public String getReleaseTime()
 	{
 		return releaseTime;
 	}
-	public void setReleaseTime(Date releaseTime)
+	public void setReleaseTime(String releaseTime)
 	{
 		this.releaseTime = releaseTime;
 	}
-	public int getSortId()
+	public int getAffairId()
 	{
-		return sortId;
+		return affairId;
 	}
-	public void setSortId(int sortId)
+	public void setAffairId(int affairId)
 	{
-		this.sortId = sortId;
+		this.affairId = affairId;
 	}	
 }
